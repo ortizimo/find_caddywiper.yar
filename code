@@ -6,6 +6,7 @@ rule find_caddy
 	meta:
 		author = "Saulo 'Sal' Ortiz, Sr. Cyber ForensicsAnalyst, ATG"
 		description = "Search for CaddyWiper malware used against Ukraine"
+		reference = "https://github.com/ortizimo/find_caddywiper.yar/blob/main/code"
 		date = "2022-03-17"
 		HEX = {55 8b ec 83 ec 68} @ offset 0x400
 		
