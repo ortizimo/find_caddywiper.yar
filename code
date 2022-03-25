@@ -1,0 +1,14 @@
+import "pe"
+import "hash"
+
+rule find_caddy
+{
+	meta:
+		author = "Saulo 'Sal' Ortiz, Sr. Cyber ForensicsAnalyst, ATG"
+		description = "Search for CaddyWiper malware used against Ukraine"
+		date = "2022-03-17"
+		HEX = {55 8b ec 83 ec 68} @ offset 0x400
+		
+	condition:
+	uint16(0) == 0x5a4d and pe.imphash() == "ea8609d4dad999f73ec4b6f8e7b28e55"
+}
